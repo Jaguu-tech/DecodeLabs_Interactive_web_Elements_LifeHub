@@ -1,0 +1,281 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeHub - Student Productivity Dashboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">LifeHub</div>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#study">Study Hub</a></li>
+          <li><a href="#student">Student</a></li>
+          <li><a href="water intake">Water Intake</a></li>
+          <li><a href="#travel">Travel</a></li>
+          <li><a href="#mood">Mood</a></li>
+          <li><a href="music">Music</a></li>
+          <li><a href="weather">Weather</a></li>
+          <li><a href="#finance">Finance</a></li>
+        </ul>
+
+        <button id="theme-toggle">🌙</button>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>LifeHub</h1>
+
+        <p>Your All-in-One Student Productivity Dashboard</p>
+
+        <div class="date-time">
+          <h3 id="current-date"></h3>
+
+          <h2 id="current-time"></h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="study-section" id="study">
+      <h2>📚 Study Hub</h2>
+
+      <div class="card">
+        <h3>Pomodoro Timer</h3>
+
+        <div id="timer">25:00</div>
+
+        <button id="startTimer">Start</button>
+
+        <button id="pauseTimer">Pause</button>
+
+        <button id="resetTimer">Reset</button>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-bar" id="studyProgress"></div>
+      </div>
+
+      <p id="progressText">Study Progress: 0%</p>
+
+      <div class="card">
+        <h3>Motivational Quotes</h3>
+
+        <p id="quote">Success starts with consistency.</p>
+
+        <button id="newQuote">Generate Quote</button>
+      </div>
+    </section>
+
+    <section class="student-section" id="student">
+      <h2>🎓 Student Dashboard</h2>
+
+      <div class="card">
+        <input type="text" id="subjectName" placeholder="Subject Name" />
+
+        <input type="number" id="subjectMarks" placeholder="Marks" />
+
+        <button id="addSubject">Add Subject</button>
+
+        <ul id="subjectList"></ul>
+
+        <h3>
+          Percentage:
+          <span id="percentage"> 0% </span>
+        </h3>
+      </div>
+    </section>
+
+    <section class="goals-section">
+      <h2>🎯 Daily Goals Tracker</h2>
+
+      <div class="card">
+        <input type="text" id="goalInput" placeholder="Enter Goal" />
+
+        <button id="addGoal">Add Goal</button>
+
+        <ul id="goalList"></ul>
+      </div>
+    </section>
+
+    <section class="cgpa-section">
+      <h2>🎓 CGPA Calculator</h2>
+
+      <div class="card">
+        <input type="number" id="sgpa1" placeholder="Semester 1 SGPA" />
+
+        <input type="number" id="sgpa2" placeholder="Semester 2 SGPA" />
+
+        <input type="number" id="sgpa3" placeholder="Semester 3 SGPA" />
+
+        <button id="calculateCgpa">Calculate CGPA</button>
+
+        <h3>
+          CGPA:
+          <span id="cgpaResult">0</span>
+        </h3>
+      </div>
+    </section>
+
+    <section class="notes-section">
+      <h2>📝 Quick Notes</h2>
+
+      <div class="card">
+        <textarea
+          id="notesArea"
+          placeholder="Write your notes here..."
+        ></textarea>
+
+        <button id="saveNotes">Save Notes</button>
+      </div>
+    </section>
+
+    <section class="water-section">
+      <h2>💧 Water Intake Tracker</h2>
+
+      <div class="card">
+        <h3>
+          Glasses:
+          <span id="waterCount">0</span>/8
+        </h3>
+
+        <button id="addWater">+1 Glass</button>
+      </div>
+    </section>
+
+    <section class="achievement-section">
+      <h2>🏆 Achievements</h2>
+
+      <div class="card">
+        <ul id="achievementList">
+          <li>🚀 Start Your Journey</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="travel-section" id="travel">
+      <h2>✈️ Travel Budget Planner</h2>
+
+      <div class="card">
+        <select id="destination">
+          <option>Select Destination</option>
+
+          <option>Tokyo</option>
+
+          <option>Paris</option>
+
+          <option>Seoul</option>
+
+          <option>Dubai</option>
+
+          <option>Singapore</option>
+        </select>
+
+        <input type="number" id="travelBudget" placeholder="Total Budget" />
+
+        <input type="number" id="travelExpense" placeholder="Expense" />
+
+        <button id="calculateTravel">Calculate</button>
+
+        <h3>Remaining: ₹<span id="remainingBudget">0</span></h3>
+      </div>
+    </section>
+
+    <section class="mood-section" id="mood">
+      <h2>😊 Mood Journal</h2>
+
+      <div class="card">
+        <select id="moodSelect">
+          <option>😊 Happy</option>
+
+          <option>😌 Calm</option>
+
+          <option>😴 Tired</option>
+
+          <option>😔 Sad</option>
+
+          <option>🔥 Motivated</option>
+        </select>
+
+        <textarea
+          id="moodNote"
+          placeholder="Write about your day..."
+        ></textarea>
+
+        <button id="saveMood">Save Entry</button>
+
+        <div id="moodHistory"></div>
+      </div>
+    </section>
+
+    <section class="music-section">
+      <h2>🎵 Focus Music</h2>
+
+      <div class="card">
+        <button
+          onclick="window.open('https://www.youtube.com/results?search_query=lofi+study+music',)">🎧 Lofi
+        </button>
+
+        <button
+          onclick="window.open('https://www.youtube.com/results?search_query=rain+sounds',)">🌧 Rain
+        </button>
+
+        <button
+          onclick="window.open('https://www.youtube.com/results?search_query=piano+study+music',)">🎹 Piano
+        </button>
+      </div>
+    </section>
+
+    <section class="weather-section">
+      <h2>🌦 Weather Widget</h2>
+
+      <div class="card">
+        <input type="text" id="cityInput" placeholder="Enter City Name" />
+
+        <button id="weatherBtn">Check Weather</button>
+
+        <h3 id="weatherResult">Weather Info</h3>
+      </div>
+    </section>
+
+    <section class="finance-section" id="finance">
+      <h2>💰 Finance Tracker</h2>
+
+      <div class="card">
+        <input type="number" id="income" placeholder="Income" />
+
+        <input type="number" id="expense" placeholder="Expense" />
+
+        <button id="addFinance">Update Balance</button>
+
+        <h3>Balance: ₹<span id="balance"> 0 </span></h3>
+
+        <ul id="transactionList"></ul>
+      </div>
+    </section>
+
+    <footer>
+      <h3>LifeHub</h3>
+
+      <p>Built with HTML, CSS & JavaScript</p>
+
+      <p>DecodeLabs Project 3</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
