@@ -2,7 +2,7 @@
 LifeHub Pro is an all-in-one productivity dashboard designed to help students manage their academics, finances, goals, travel planning, and daily activities from a single platform.
 Built using HTML, CSS, and JavaScript, this project combines multiple productivity tools into one responsive and interactive web application.
 
-## Featuresl
+## Features
 
 ### Study Hub
 * Pomodoro Timer
@@ -100,6 +100,6 @@ Through this project, I gained hands-on experience in:
 * Cloud Database Support
 * AI Productivity Assistant
 
-## 💻 Developed By
+## Developed By
 **Jagruti Popali**
 Frontend Development Intern
